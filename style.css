@@ -37,3 +37,32 @@ div.main-container {
     display: grid;
     grid-template-rows: auto auto;
 }
+
+div.upper-header {
+    display:grid;
+    grid-template-columns: 1fr  auto repeat(3, 1fr);
+}
+
+input {
+    width: 100%;
+}
+
+div.down-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+div.projects-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+div.annoucement-trending {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
