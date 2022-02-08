@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 *, *:before, *:after {
@@ -27,7 +28,6 @@ img {
 }
 
 body {
-    height: 100vh;
     display: grid;
     grid-template-columns: minmax(min-content, max-content) auto;
 }
@@ -35,12 +35,12 @@ body {
 
 div.main-container {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: min-content min-content;
 }
 
 div.upper-header {
-    display:grid;
-    grid-template-columns: 1fr  auto repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: auto auto auto auto 0.2fr;
 }
 
 input {
@@ -49,12 +49,18 @@ input {
 
 div.down-header {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: max-content auto max-content;
 }
 
 div.projects-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+div.project-actions {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
 }
 
 div.annoucement-trending {
@@ -65,4 +71,68 @@ div.annoucement-trending {
 main {
     display: grid;
     grid-template-columns: 3fr 1fr;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.menu-icon {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.logo .menu-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo .menu-icon  {
+    height: 32px;
+}
+
+div.project {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
+
+.project-action {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.trending-icon > img {
+    height: 48px;
+}
+
+.trending-icon {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+div.trending {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+div.avatar > img {
+    height: 48px;
+}
+
+div.big-avatar-icon > img {
+    height: 64px;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    align-content: center;
 }
